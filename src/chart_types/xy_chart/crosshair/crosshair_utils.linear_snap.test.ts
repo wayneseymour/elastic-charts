@@ -17,9 +17,9 @@
  * under the License.
  */
 
-import { ChartTypes } from '../..';
+import { ChartType } from '../..';
 import { ScaleType } from '../../../scales/constants';
-import { SpecTypes } from '../../../specs/constants';
+import { SpecType } from '../../../specs/constants';
 import { Dimensions } from '../../../utils/dimensions';
 import { computeSeriesDomains } from '../state/utils/utils';
 import { computeXScale } from '../utils/scales';
@@ -33,8 +33,8 @@ describe('Crosshair utils linear scale', () => {
   const lineSeries2SpecId = 'lineSeries2';
 
   const barSeries1: BasicSeriesSpec = {
-    chartType: ChartTypes.XYAxis,
-    specType: SpecTypes.Series,
+    chartType: ChartType.XYAxis,
+    specType: SpecType.Series,
     id: barSeries1SpecId,
     groupId: 'group1',
     seriesType: SeriesTypes.Bar,
@@ -49,8 +49,8 @@ describe('Crosshair utils linear scale', () => {
     yScaleType: ScaleType.Linear,
   };
   const barSeries2: BasicSeriesSpec = {
-    chartType: ChartTypes.XYAxis,
-    specType: SpecTypes.Series,
+    chartType: ChartType.XYAxis,
+    specType: SpecType.Series,
     id: barSeries2SpecId,
     groupId: 'group1',
     seriesType: SeriesTypes.Bar,
@@ -65,8 +65,8 @@ describe('Crosshair utils linear scale', () => {
     yScaleType: ScaleType.Linear,
   };
   const lineSeries1: BasicSeriesSpec = {
-    chartType: ChartTypes.XYAxis,
-    specType: SpecTypes.Series,
+    chartType: ChartType.XYAxis,
+    specType: SpecType.Series,
     id: lineSeries1SpecId,
     groupId: 'group1',
     seriesType: SeriesTypes.Line,
@@ -81,8 +81,8 @@ describe('Crosshair utils linear scale', () => {
     yScaleType: ScaleType.Linear,
   };
   const lineSeries2: BasicSeriesSpec = {
-    chartType: ChartTypes.XYAxis,
-    specType: SpecTypes.Series,
+    chartType: ChartType.XYAxis,
+    specType: SpecType.Series,
     id: lineSeries2SpecId,
     groupId: 'group1',
     seriesType: SeriesTypes.Line,

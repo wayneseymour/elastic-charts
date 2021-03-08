@@ -170,7 +170,7 @@ export type AxisId = string;
 // @public
 export interface AxisSpec extends Spec {
     // (undocumented)
-    chartType: typeof ChartTypes.XYAxis;
+    chartType: typeof ChartType.XYAxis;
     domain?: YDomainRange;
     gridLine?: Partial<GridLineStyle>;
     groupId: GroupId;
@@ -185,7 +185,7 @@ export interface AxisSpec extends Spec {
     showOverlappingLabels: boolean;
     showOverlappingTicks: boolean;
     // (undocumented)
-    specType: typeof SpecTypes.Axis;
+    specType: typeof SpecType.Axis;
     style?: RecursivePartial<Omit<AxisStyle, 'gridLine'>>;
     tickFormat?: TickFormatter;
     ticks?: number;
@@ -298,12 +298,12 @@ export type BarStyleOverride = RecursivePartial<BarSeriesStyle> | Color | null;
 export interface BaseAnnotationSpec<T extends typeof AnnotationTypes.Rectangle | typeof AnnotationTypes.Line, D extends RectAnnotationDatum | LineAnnotationDatum, S extends RectAnnotationStyle | LineAnnotationStyle> extends Spec, AnnotationPortalSettings {
     annotationType: T;
     // (undocumented)
-    chartType: typeof ChartTypes.XYAxis;
+    chartType: typeof ChartType.XYAxis;
     dataValues: D[];
     groupId: GroupId;
     hideTooltips?: boolean;
     // (undocumented)
-    specType: typeof SpecTypes.Annotation;
+    specType: typeof SpecType.Annotation;
     style?: Partial<S>;
     zIndex?: number;
 }
@@ -459,10 +459,10 @@ export interface ChartSizeObject {
     width?: number | string;
 }
 
-// Warning: (ae-missing-release-tag) "ChartTypes" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
+// Warning: (ae-missing-release-tag) "ChartType" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public
-export const ChartTypes: Readonly<{
+export const ChartType: Readonly<{
     Global: "global";
     Goal: "goal";
     Partition: "partition";
@@ -472,7 +472,7 @@ export const ChartTypes: Readonly<{
 }>;
 
 // @public (undocumented)
-export type ChartTypes = $Values<typeof ChartTypes>;
+export type ChartType = $Values<typeof ChartType>;
 
 // Warning: (ae-missing-release-tag) "CHILDREN_KEY" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
@@ -886,7 +886,7 @@ export interface GoalSpec extends Spec {
     // (undocumented)
     centralMinor: string | BandFillColorAccessor;
     // (undocumented)
-    chartType: typeof ChartTypes.Goal;
+    chartType: typeof ChartType.Goal;
     // Warning: (ae-forgotten-export) The symbol "Config" needs to be exported by the entry point index.d.ts
     //
     // (undocumented)
@@ -896,7 +896,7 @@ export interface GoalSpec extends Spec {
     // (undocumented)
     labelMinor: string | BandFillColorAccessor;
     // (undocumented)
-    specType: typeof SpecTypes.Series;
+    specType: typeof SpecType.Series;
     // Warning: (ae-forgotten-export) The symbol "GoalSubtype" needs to be exported by the entry point index.d.ts
     //
     // (undocumented)
@@ -1094,7 +1094,7 @@ export type HeatmapElementEvent = [Cell, SeriesIdentifier];
 // @alpha (undocumented)
 export interface HeatmapSpec extends Spec {
     // (undocumented)
-    chartType: typeof ChartTypes.Heatmap;
+    chartType: typeof ChartType.Heatmap;
     // (undocumented)
     colors: Color[];
     // Warning: (ae-forgotten-export) The symbol "HeatmapScaleType" needs to be exported by the entry point index.d.ts
@@ -1115,7 +1115,7 @@ export interface HeatmapSpec extends Spec {
     // (undocumented)
     ranges?: number[] | [number, number];
     // (undocumented)
-    specType: typeof SpecTypes.Series;
+    specType: typeof SpecType.Series;
     // (undocumented)
     valueAccessor: Accessor | AccessorFn;
     // (undocumented)
@@ -1939,7 +1939,7 @@ export interface SeriesScales {
 // @public (undocumented)
 export interface SeriesSpec extends Spec {
     // (undocumented)
-    chartType: typeof ChartTypes.XYAxis;
+    chartType: typeof ChartType.XYAxis;
     color?: SeriesColorAccessor;
     data: Datum[];
     // (undocumented)
@@ -1952,7 +1952,7 @@ export interface SeriesSpec extends Spec {
     // @deprecated
     sortIndex?: number;
     // (undocumented)
-    specType: typeof SpecTypes.Series;
+    specType: typeof SpecType.Series;
     tickFormat?: TickFormatter;
     useDefaultGroupDomain?: boolean | string;
     // Warning: (ae-forgotten-export) The symbol "AccessorFormat" needs to be exported by the entry point index.d.ts
@@ -2127,7 +2127,7 @@ export interface SortSeriesByConfig {
 //
 // @public (undocumented)
 export interface Spec {
-    chartType: ChartTypes;
+    chartType: ChartType;
     id: string;
     specType: string;
 }
@@ -2135,10 +2135,10 @@ export interface Spec {
 // @public (undocumented)
 export type SpecId = string;
 
-// Warning: (ae-missing-release-tag) "SpecTypes" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
+// Warning: (ae-missing-release-tag) "SpecType" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public (undocumented)
-export const SpecTypes: Readonly<{
+export const SpecType: Readonly<{
     Series: "series";
     Axis: "axis";
     Annotation: "annotation";
@@ -2148,7 +2148,7 @@ export const SpecTypes: Readonly<{
 }>;
 
 // @public (undocumented)
-export type SpecTypes = $Values<typeof SpecTypes>;
+export type SpecType = $Values<typeof SpecType>;
 
 // @public
 export const StackMode: Readonly<{
@@ -2411,7 +2411,7 @@ export interface WordcloudSpec extends Spec {
     // (undocumented)
     angleCount: number;
     // (undocumented)
-    chartType: typeof ChartTypes.Wordcloud;
+    chartType: typeof ChartType.Wordcloud;
     // (undocumented)
     config: RecursivePartial<PartitionConfig>;
     // Warning: (ae-forgotten-export) The symbol "WordModel" needs to be exported by the entry point index.d.ts
@@ -2439,7 +2439,7 @@ export interface WordcloudSpec extends Spec {
     // (undocumented)
     padding: number;
     // (undocumented)
-    specType: typeof SpecTypes.Series;
+    specType: typeof SpecType.Series;
     // (undocumented)
     spiral: string;
     // (undocumented)

@@ -213,8 +213,8 @@ describe('Rendering bars', () => {
   //   const spec1Id = 'bar1';
   //   const spec2Id = 'bar2';
   //   const barSeriesSpec1: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: spec1Id,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -228,8 +228,8 @@ describe('Rendering bars', () => {
   //     yScaleType: ScaleType.Linear,
   //   };
   //   const barSeriesSpec2: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: spec2Id,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -369,8 +369,8 @@ describe('Rendering bars', () => {
   // });
   // describe('Single series bar chart - linear', () => {
   //   const barSeriesSpec: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: SPEC_ID,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -441,8 +441,8 @@ describe('Rendering bars', () => {
   // });
   // describe('Single series bar chart - log', () => {
   //   const barSeriesSpec: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: SPEC_ID,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -487,8 +487,8 @@ describe('Rendering bars', () => {
   //   const spec1Id = 'bar1';
   //   const spec2Id = 'bar2';
   //   const barSeriesSpec1: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: spec1Id,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -502,8 +502,8 @@ describe('Rendering bars', () => {
   //     yScaleType: ScaleType.Linear,
   //   };
   //   const barSeriesSpec2: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: spec2Id,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -623,8 +623,8 @@ describe('Rendering bars', () => {
   //   const spec1Id = 'bar1';
   //   const spec2Id = 'bar2';
   //   const barSeriesSpec1: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: spec1Id,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -638,8 +638,8 @@ describe('Rendering bars', () => {
   //     yScaleType: ScaleType.Linear,
   //   };
   //   const barSeriesSpec2: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: spec2Id,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -762,8 +762,8 @@ describe('Rendering bars', () => {
   // });
   // describe('Remove points datum is not in domain', () => {
   //   const barSeriesSpec: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: SPEC_ID,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,
@@ -830,8 +830,8 @@ describe('Rendering bars', () => {
   //     [18, 100000],
   //   ];
   //   const barSeriesSpec: BarSeriesSpec = {
-  //     chartType: ChartTypes.XYAxis,
-  //     specType: SpecTypes.Series,
+  //     chartType: ChartType.XYAxis,
+  //     specType: SpecType.Series,
   //     id: SPEC_ID,
   //     groupId: GROUP_ID,
   //     seriesType: SeriesTypes.Bar,

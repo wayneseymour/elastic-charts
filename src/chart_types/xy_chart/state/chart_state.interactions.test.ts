@@ -21,12 +21,12 @@
 
 import { Store } from 'redux';
 
-import { ChartTypes } from '../..';
+import { ChartType } from '../..';
 import { Rect } from '../../../geoms/types';
 import { MockStore } from '../../../mocks/store';
 import { ScaleType } from '../../../scales/constants';
 import { SettingsSpec, XScaleType, XYBrushArea } from '../../../specs';
-import { SpecTypes, DEFAULT_SETTINGS_SPEC, TooltipType, BrushAxis } from '../../../specs/constants';
+import { SpecType, DEFAULT_SETTINGS_SPEC, TooltipType, BrushAxis } from '../../../specs/constants';
 import { onExternalPointerEvent } from '../../../state/actions/events';
 import { onPointerMove, onMouseDown, onMouseUp } from '../../../state/actions/mouse';
 import { GlobalChartState } from '../../../state/chart_state';
@@ -51,8 +51,8 @@ const SPEC_ID = 'spec_1';
 const GROUP_ID = 'group_1';
 
 const ordinalBarSeries: BarSeriesSpec = {
-  chartType: ChartTypes.XYAxis,
-  specType: SpecTypes.Series,
+  chartType: ChartType.XYAxis,
+  specType: SpecType.Series,
   id: SPEC_ID,
   groupId: GROUP_ID,
   seriesType: SeriesTypes.Bar,
@@ -67,8 +67,8 @@ const ordinalBarSeries: BarSeriesSpec = {
   hideInLegend: false,
 };
 const linearBarSeries: BarSeriesSpec = {
-  chartType: ChartTypes.XYAxis,
-  specType: SpecTypes.Series,
+  chartType: ChartType.XYAxis,
+  specType: SpecType.Series,
   id: SPEC_ID,
   groupId: GROUP_ID,
   seriesType: SeriesTypes.Bar,
@@ -692,8 +692,8 @@ function mouseOverTestSuite(scaleType: XScaleType) {
     };
     beforeEach(() => {
       leftAxis = {
-        chartType: ChartTypes.XYAxis,
-        specType: SpecTypes.Axis,
+        chartType: ChartType.XYAxis,
+        specType: SpecType.Axis,
         hide: true,
         id: 'yaxis',
         groupId: GROUP_ID,
@@ -704,8 +704,8 @@ function mouseOverTestSuite(scaleType: XScaleType) {
         style,
       };
       bottomAxis = {
-        chartType: ChartTypes.XYAxis,
-        specType: SpecTypes.Axis,
+        chartType: ChartType.XYAxis,
+        specType: SpecType.Axis,
         hide: true,
         id: 'xaxis',
         groupId: GROUP_ID,

@@ -19,14 +19,14 @@
 
 import { flatten } from 'lodash';
 
-import { ChartTypes } from '../..';
+import { ChartType } from '../..';
 import { MockDataSeries } from '../../../mocks/series';
 import { MockSeriesIdentifier } from '../../../mocks/series/series_identifiers';
 import { MockSeriesSpec, MockGlobalSpec } from '../../../mocks/specs';
 import { MockStore } from '../../../mocks/store';
 import { SeededDataGenerator, getRandomNumberGenerator } from '../../../mocks/utils';
 import { ScaleType } from '../../../scales/constants';
-import { SpecTypes } from '../../../specs/constants';
+import { SpecType } from '../../../specs/constants';
 import { AccessorFn } from '../../../utils/accessor';
 import { Position } from '../../../utils/common';
 import * as TestDataset from '../../../utils/data_samples/test_dataset';
@@ -441,8 +441,8 @@ describe('Series', () => {
 
   test('should split an array of specs into data series', () => {
     const spec1: LineSeriesSpec = {
-      specType: SpecTypes.Series,
-      chartType: ChartTypes.XYAxis,
+      specType: SpecType.Series,
+      chartType: ChartType.XYAxis,
       id: 'spec1',
       groupId: 'group',
       seriesType: SeriesTypes.Line,
@@ -454,8 +454,8 @@ describe('Series', () => {
       hideInLegend: false,
     };
     const spec2: BasicSeriesSpec = {
-      specType: SpecTypes.Series,
-      chartType: ChartTypes.XYAxis,
+      specType: SpecType.Series,
+      chartType: ChartType.XYAxis,
       id: 'spec2',
       groupId: 'group2',
       seriesType: SeriesTypes.Line,
@@ -474,8 +474,8 @@ describe('Series', () => {
   });
   test('should compute data series for stacked specs', () => {
     const spec1: BasicSeriesSpec = {
-      specType: SpecTypes.Series,
-      chartType: ChartTypes.XYAxis,
+      specType: SpecType.Series,
+      chartType: ChartType.XYAxis,
       id: 'spec1',
       groupId: 'group',
       seriesType: SeriesTypes.Line,
@@ -487,8 +487,8 @@ describe('Series', () => {
       hideInLegend: false,
     };
     const spec2: BasicSeriesSpec = {
-      specType: SpecTypes.Series,
-      chartType: ChartTypes.XYAxis,
+      specType: SpecType.Series,
+      chartType: ChartType.XYAxis,
       id: 'spec2',
       groupId: 'group2',
       seriesType: SeriesTypes.Line,
@@ -576,8 +576,8 @@ describe('Series', () => {
     const id = 'splitSpec';
     const yAccessors = ['y1', 'y2'];
     const splitSpec: BasicSeriesSpec = {
-      specType: SpecTypes.Series,
-      chartType: ChartTypes.XYAxis,
+      specType: SpecType.Series,
+      chartType: ChartType.XYAxis,
       id,
       groupId: 'group',
       seriesType: SeriesTypes.Line,

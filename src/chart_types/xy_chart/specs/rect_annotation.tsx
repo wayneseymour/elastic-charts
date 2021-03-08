@@ -19,15 +19,15 @@
 
 import React from 'react';
 
-import { ChartTypes } from '../..';
-import { SpecTypes } from '../../../specs/constants';
+import { ChartType } from '../..';
+import { SpecType } from '../../../specs/constants';
 import { specComponentFactory, getConnect } from '../../../state/spec_factory';
 import { DEFAULT_ANNOTATION_RECT_STYLE } from '../../../utils/themes/merge_utils';
 import { RectAnnotationSpec, DEFAULT_GLOBAL_ID, AnnotationTypes } from '../utils/specs';
 
 const defaultProps = {
-  chartType: ChartTypes.XYAxis,
-  specType: SpecTypes.Annotation,
+  chartType: ChartType.XYAxis,
+  specType: SpecType.Annotation,
   groupId: DEFAULT_GLOBAL_ID,
   annotationType: AnnotationTypes.Rectangle,
   zIndex: -1,

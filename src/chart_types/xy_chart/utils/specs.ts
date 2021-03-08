@@ -19,13 +19,13 @@
 
 import { $Values } from 'utility-types';
 
-import { ChartTypes } from '../..';
+import { ChartType } from '../..';
 import { TooltipPortalSettings } from '../../../components/portal/types';
 import { ScaleContinuousType } from '../../../scales';
 import { ScaleType } from '../../../scales/constants';
 import { LogScaleOptions } from '../../../scales/scale_continuous';
 import { Spec } from '../../../specs';
-import { SpecTypes } from '../../../specs/constants';
+import { SpecType } from '../../../specs/constants';
 import { Accessor, AccessorFormat, AccessorFn } from '../../../utils/accessor';
 import { RecursivePartial, Color, Position, Datum } from '../../../utils/common';
 import { CurveType } from '../../../utils/curves';
@@ -346,8 +346,8 @@ export interface DisplayValueSpec {
 }
 
 export interface SeriesSpec extends Spec {
-  specType: typeof SpecTypes.Series;
-  chartType: typeof ChartTypes.XYAxis;
+  specType: typeof SpecType.Series;
+  chartType: typeof ChartType.XYAxis;
   /**
    * The name of the spec. Also a mechanism to provide custom series names.
    */
@@ -631,8 +631,8 @@ export type HistogramModeAlignment = 'start' | 'center' | 'end';
  * This spec describe the configuration for a chart axis.
  */
 export interface AxisSpec extends Spec {
-  specType: typeof SpecTypes.Axis;
-  chartType: typeof ChartTypes.XYAxis;
+  specType: typeof SpecType.Axis;
+  chartType: typeof ChartType.XYAxis;
   /** The ID of the spec */
   id: AxisId;
   /** Style options for grid line */
@@ -849,8 +849,8 @@ export interface BaseAnnotationSpec<
   S extends RectAnnotationStyle | LineAnnotationStyle
 > extends Spec,
     AnnotationPortalSettings {
-  chartType: typeof ChartTypes.XYAxis;
-  specType: typeof SpecTypes.Annotation;
+  chartType: typeof ChartType.XYAxis;
+  specType: typeof SpecType.Annotation;
   /**
    * Annotation type: line, rectangle
    */

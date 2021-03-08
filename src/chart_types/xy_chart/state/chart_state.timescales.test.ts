@@ -20,10 +20,10 @@
 import { DateTime } from 'luxon';
 import { createStore, Store } from 'redux';
 
-import { ChartTypes } from '../..';
+import { ChartType } from '../..';
 import { ScaleType } from '../../../scales/constants';
 import { SettingsSpec } from '../../../specs';
-import { SpecTypes, DEFAULT_SETTINGS_SPEC } from '../../../specs/constants';
+import { SpecType, DEFAULT_SETTINGS_SPEC } from '../../../specs/constants';
 import { updateParentDimensions } from '../../../state/actions/chart_settings';
 import { onPointerMove } from '../../../state/actions/mouse';
 import { upsertSpec, specParsed } from '../../../state/actions/specs';
@@ -46,8 +46,8 @@ describe('Render chart', () => {
       store = createStore(storeReducer);
 
       const lineSeries: LineSeriesSpec = {
-        chartType: ChartTypes.XYAxis,
-        specType: SpecTypes.Series,
+        chartType: ChartType.XYAxis,
+        specType: SpecType.Series,
         id: 'lines',
         groupId: 'line',
         seriesType: SeriesTypes.Line,
@@ -78,7 +78,7 @@ describe('Render chart', () => {
       store.dispatch(updateParentDimensions({ width: 100, height: 100, top: 0, left: 0 }));
       const state = store.getState();
       expect(state.specs.lines).toBeDefined();
-      expect(state.chartType).toBe(ChartTypes.XYAxis);
+      expect(state.chartType).toBe(ChartType.XYAxis);
     });
     test('check rendered geometries', () => {
       const { geometries } = computeSeriesGeometriesSelector(store.getState());
@@ -121,8 +121,8 @@ describe('Render chart', () => {
       store = createStore(storeReducer);
 
       const lineSeries: LineSeriesSpec = {
-        chartType: ChartTypes.XYAxis,
-        specType: SpecTypes.Series,
+        chartType: ChartType.XYAxis,
+        specType: SpecType.Series,
         id: 'lines',
         groupId: 'line',
         seriesType: SeriesTypes.Line,
@@ -152,7 +152,7 @@ describe('Render chart', () => {
       store.dispatch(updateParentDimensions({ width: 100, height: 100, top: 0, left: 0 }));
       const state = store.getState();
       expect(state.specs.lines).toBeDefined();
-      expect(state.chartType).toBe(ChartTypes.XYAxis);
+      expect(state.chartType).toBe(ChartType.XYAxis);
     });
     test('check rendered geometries', () => {
       const { geometries } = computeSeriesGeometriesSelector(store.getState());
@@ -194,8 +194,8 @@ describe('Render chart', () => {
       const storeReducer = chartStoreReducer('chartId');
       store = createStore(storeReducer);
       const lineSeries: LineSeriesSpec = {
-        chartType: ChartTypes.XYAxis,
-        specType: SpecTypes.Series,
+        chartType: ChartType.XYAxis,
+        specType: SpecType.Series,
         id: 'lines',
         groupId: 'line',
         seriesType: SeriesTypes.Line,
@@ -225,7 +225,7 @@ describe('Render chart', () => {
       store.dispatch(updateParentDimensions({ width: 100, height: 100, top: 0, left: 0 }));
       const state = store.getState();
       expect(state.specs.lines).toBeDefined();
-      expect(state.chartType).toBe(ChartTypes.XYAxis);
+      expect(state.chartType).toBe(ChartType.XYAxis);
     });
     test('check rendered geometries', () => {
       const { geometries } = computeSeriesGeometriesSelector(store.getState());
