@@ -44,13 +44,13 @@ export interface AngleFromTo {
 }
 
 // @public
-export type AnnotationDomainType = $Values<typeof AnnotationDomainTypes>;
-
-// @public
-export const AnnotationDomainTypes: Readonly<{
+export const AnnotationDomainType: Readonly<{
     XDomain: "xDomain";
     YDomain: "yDomain";
 }>;
+
+// @public
+export type AnnotationDomainType = $Values<typeof AnnotationDomainType>;
 
 // @public (undocumented)
 export type AnnotationId = string;

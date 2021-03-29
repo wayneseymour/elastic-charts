@@ -706,7 +706,7 @@ export type AnnotationType = $Values<typeof AnnotationType>;
  * The domain type enum that can be associated with an annotation
  * @public
  */
-export const AnnotationDomainTypes = Object.freeze({
+export const AnnotationDomainType = Object.freeze({
   XDomain: 'xDomain' as const,
   YDomain: 'yDomain' as const,
 });
@@ -715,7 +715,7 @@ export const AnnotationDomainTypes = Object.freeze({
  * The domain type that can be associated with an annotation
  * @public
  */
-export type AnnotationDomainType = $Values<typeof AnnotationDomainTypes>;
+export type AnnotationDomainType = $Values<typeof AnnotationDomainType>;
 
 /**
  * The descriptive object of a line annotation

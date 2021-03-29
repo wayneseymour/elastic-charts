@@ -30,7 +30,7 @@ import { Dimensions } from '../../../../utils/dimensions';
 import { AnnotationId } from '../../../../utils/ids';
 import { LineAnnotation } from '../../specs/line_annotation';
 import { LineSeries } from '../../specs/line_series';
-import { AnnotationDomainTypes, AnnotationType, AxisSpec, RectAnnotationSpec } from '../../utils/specs';
+import { AnnotationDomainType, AnnotationType, AxisSpec, RectAnnotationSpec } from '../../utils/specs';
 import { computeRectAnnotationTooltipState } from '../tooltip';
 import { AnnotationDimensions } from '../types';
 import { AnnotationLineProps } from './types';
@@ -57,7 +57,7 @@ describe('Annotation tooltips', () => {
           />
           <LineAnnotation
             id="foo"
-            domainType={AnnotationDomainTypes.YDomain}
+            domainType={AnnotationDomainType.YDomain}
             dataValues={[{ dataValue: 2, details: 'foo' }]}
             marker={<div style={{ width: '10px', height: '10px' }} />}
           />
@@ -95,7 +95,7 @@ describe('Annotation tooltips', () => {
           />
           <LineAnnotation
             id="foo"
-            domainType={AnnotationDomainTypes.YDomain}
+            domainType={AnnotationDomainType.YDomain}
             dataValues={[{ dataValue: 2, details: 'foo' }]}
             marker={<div style={{ width: '10px', height: '10px' }} />}
             hideTooltips

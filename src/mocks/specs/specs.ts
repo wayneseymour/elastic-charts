@@ -37,7 +37,7 @@ import {
   LineAnnotationSpec,
   RectAnnotationSpec,
   AnnotationType,
-  AnnotationDomainTypes,
+  AnnotationDomainType,
   AxisSpec,
 } from '../../chart_types/xy_chart/utils/specs';
 import { Predicate } from '../../common/predicate';
@@ -350,7 +350,7 @@ export class MockAnnotationSpec {
     specType: SpecType.Annotation,
     annotationType: AnnotationType.Line,
     dataValues: [],
-    domainType: AnnotationDomainTypes.XDomain,
+    domainType: AnnotationDomainType.XDomain,
   };
 
   private static readonly rectBase: RectAnnotationSpec = {
