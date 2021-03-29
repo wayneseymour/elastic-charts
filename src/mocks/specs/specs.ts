@@ -36,7 +36,7 @@ import {
   BubbleSeriesSpec,
   LineAnnotationSpec,
   RectAnnotationSpec,
-  AnnotationTypes,
+  AnnotationType,
   AnnotationDomainTypes,
   AxisSpec,
 } from '../../chart_types/xy_chart/utils/specs';
@@ -348,7 +348,7 @@ export class MockAnnotationSpec {
     groupId: DEFAULT_GLOBAL_ID,
     chartType: ChartType.XYAxis,
     specType: SpecType.Annotation,
-    annotationType: AnnotationTypes.Line,
+    annotationType: AnnotationType.Line,
     dataValues: [],
     domainType: AnnotationDomainTypes.XDomain,
   };
@@ -358,7 +358,7 @@ export class MockAnnotationSpec {
     groupId: DEFAULT_GLOBAL_ID,
     chartType: ChartType.XYAxis,
     specType: SpecType.Annotation,
-    annotationType: AnnotationTypes.Rectangle,
+    annotationType: AnnotationType.Rectangle,
     dataValues: [],
   };
 

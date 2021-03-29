@@ -67,17 +67,17 @@ export type AnnotationSpec = LineAnnotationSpec | RectAnnotationSpec;
 // @public (undocumented)
 export type AnnotationTooltipFormatter = (details?: string) => JSX.Element | null;
 
-// @public (undocumented)
-export type AnnotationType = $Values<typeof AnnotationTypes>;
-
-// Warning: (ae-missing-release-tag) "AnnotationTypes" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
+// Warning: (ae-missing-release-tag) "AnnotationType" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public (undocumented)
-export const AnnotationTypes: Readonly<{
+export const AnnotationType: Readonly<{
     Line: "line";
     Rectangle: "rectangle";
     Text: "text";
 }>;
+
+// @public (undocumented)
+export type AnnotationType = $Values<typeof AnnotationType>;
 
 // Warning: (ae-missing-release-tag) "ArcSeriesStyle" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
@@ -295,7 +295,7 @@ export type BarStyleOverride = RecursivePartial<BarSeriesStyle> | Color | null;
 // Warning: (ae-missing-release-tag) "BaseAnnotationSpec" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public (undocumented)
-export interface BaseAnnotationSpec<T extends typeof AnnotationTypes.Rectangle | typeof AnnotationTypes.Line, D extends RectAnnotationDatum | LineAnnotationDatum, S extends RectAnnotationStyle | LineAnnotationStyle> extends Spec, AnnotationPortalSettings {
+export interface BaseAnnotationSpec<T extends typeof AnnotationType.Rectangle | typeof AnnotationType.Line, D extends RectAnnotationDatum | LineAnnotationDatum, S extends RectAnnotationStyle | LineAnnotationStyle> extends Spec, AnnotationPortalSettings {
     annotationType: T;
     // (undocumented)
     chartType: typeof ChartType.XYAxis;
@@ -1346,7 +1346,7 @@ export interface LineAnnotationDatum {
 }
 
 // @public (undocumented)
-export type LineAnnotationSpec = BaseAnnotationSpec<typeof AnnotationTypes.Line, LineAnnotationDatum, LineAnnotationStyle> & {
+export type LineAnnotationSpec = BaseAnnotationSpec<typeof AnnotationType.Line, LineAnnotationDatum, LineAnnotationStyle> & {
     domainType: AnnotationDomainType;
     marker?: JSX.Element;
     markerDimensions?: {
@@ -1764,7 +1764,7 @@ export interface RectAnnotationDatum {
 }
 
 // @public (undocumented)
-export type RectAnnotationSpec = BaseAnnotationSpec<typeof AnnotationTypes.Rectangle, RectAnnotationDatum, RectAnnotationStyle> & {
+export type RectAnnotationSpec = BaseAnnotationSpec<typeof AnnotationType.Rectangle, RectAnnotationDatum, RectAnnotationStyle> & {
     renderTooltip?: AnnotationTooltipFormatter;
     zIndex?: number;
 };

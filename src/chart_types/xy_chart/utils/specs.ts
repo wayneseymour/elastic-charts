@@ -694,13 +694,13 @@ export type TickFormatterOptions = {
 /** @public */
 export type TickFormatter<V = any> = (value: V, options?: TickFormatterOptions) => string;
 
-export const AnnotationTypes = Object.freeze({
+export const AnnotationType = Object.freeze({
   Line: 'line' as const,
   Rectangle: 'rectangle' as const,
   Text: 'text' as const,
 });
 /** @public */
-export type AnnotationType = $Values<typeof AnnotationTypes>;
+export type AnnotationType = $Values<typeof AnnotationType>;
 
 /**
  * The domain type enum that can be associated with an annotation
@@ -738,7 +738,7 @@ export interface LineAnnotationDatum {
 
 /** @public */
 export type LineAnnotationSpec = BaseAnnotationSpec<
-  typeof AnnotationTypes.Line,
+  typeof AnnotationType.Line,
   LineAnnotationDatum,
   LineAnnotationStyle
 > & {
@@ -810,7 +810,7 @@ export interface RectAnnotationDatum {
 
 /** @public */
 export type RectAnnotationSpec = BaseAnnotationSpec<
-  typeof AnnotationTypes.Rectangle,
+  typeof AnnotationType.Rectangle,
   RectAnnotationDatum,
   RectAnnotationStyle
 > & {
@@ -844,7 +844,7 @@ export type AnnotationPortalSettings = TooltipPortalSettings<'chart'> & {
 };
 
 export interface BaseAnnotationSpec<
-  T extends typeof AnnotationTypes.Rectangle | typeof AnnotationTypes.Line,
+  T extends typeof AnnotationType.Rectangle | typeof AnnotationType.Line,
   D extends RectAnnotationDatum | LineAnnotationDatum,
   S extends RectAnnotationStyle | LineAnnotationStyle
 > extends Spec,
@@ -884,12 +884,12 @@ export type AnnotationSpec = LineAnnotationSpec | RectAnnotationSpec;
 
 /** @internal */
 export function isLineAnnotation(spec: AnnotationSpec): spec is LineAnnotationSpec {
-  return spec.annotationType === AnnotationTypes.Line;
+  return spec.annotationType === AnnotationType.Line;
 }
 
 /** @internal */
 export function isRectAnnotation(spec: AnnotationSpec): spec is RectAnnotationSpec {
-  return spec.annotationType === AnnotationTypes.Rectangle;
+  return spec.annotationType === AnnotationType.Rectangle;
 }
 
 /** @internal */

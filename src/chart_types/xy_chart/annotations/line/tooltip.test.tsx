@@ -30,7 +30,7 @@ import { Dimensions } from '../../../../utils/dimensions';
 import { AnnotationId } from '../../../../utils/ids';
 import { LineAnnotation } from '../../specs/line_annotation';
 import { LineSeries } from '../../specs/line_series';
-import { AnnotationDomainTypes, AnnotationTypes, AxisSpec, RectAnnotationSpec } from '../../utils/specs';
+import { AnnotationDomainTypes, AnnotationType, AxisSpec, RectAnnotationSpec } from '../../utils/specs';
 import { computeRectAnnotationTooltipState } from '../tooltip';
 import { AnnotationDimensions } from '../types';
 import { AnnotationLineProps } from './types';
@@ -148,7 +148,7 @@ describe('Annotation tooltips', () => {
       specType: SpecType.Annotation,
       id: 'rect',
       groupId,
-      annotationType: AnnotationTypes.Rectangle,
+      annotationType: AnnotationType.Rectangle,
       dataValues: [{ coordinates: { x0: 1, x1: 2, y0: 3, y1: 5 } }],
     };
 
@@ -170,7 +170,7 @@ describe('Annotation tooltips', () => {
 
     expect(rectTooltipState).toMatchObject({
       isVisible: true,
-      annotationType: AnnotationTypes.Rectangle,
+      annotationType: AnnotationType.Rectangle,
       anchor: {
         left: 18,
         top: 9,

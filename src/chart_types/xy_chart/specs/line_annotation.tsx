@@ -23,13 +23,13 @@ import { ChartType } from '../..';
 import { SpecType } from '../../../specs/constants';
 import { getConnect, specComponentFactory } from '../../../state/spec_factory';
 import { DEFAULT_ANNOTATION_LINE_STYLE } from '../../../utils/themes/merge_utils';
-import { LineAnnotationSpec, DEFAULT_GLOBAL_ID, AnnotationTypes } from '../utils/specs';
+import { LineAnnotationSpec, DEFAULT_GLOBAL_ID, AnnotationType } from '../utils/specs';
 
 const defaultProps = {
   chartType: ChartType.XYAxis,
   specType: SpecType.Annotation,
   groupId: DEFAULT_GLOBAL_ID,
-  annotationType: AnnotationTypes.Line,
+  annotationType: AnnotationType.Line,
   style: DEFAULT_ANNOTATION_LINE_STYLE,
   hideLines: false,
   hideTooltips: false,
