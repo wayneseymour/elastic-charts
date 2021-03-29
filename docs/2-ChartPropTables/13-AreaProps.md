@@ -12,7 +12,7 @@ Default props are set in the area_series.tsx file
 | data `(required)` | datum[] |  | An array of data |
 | chartType | `typeof ChartType.XYAxis` | ChartType.XYAxis  |  |
 | specType | `typeof SpecType.Series` | SpecType.Series | | 
-| seriesType| `typeof SeriesTypes.Area` | SeriesTypes.Area | |
+| seriesType| `typeof SeriesType.Area` | SeriesType.Area | |
 | groupId | string | DEFAULT_GLOBAL_ID | | 
 | yScaleToDataExtent | boolean | false | | 
 | hideInLegend | boolean | false | hide the series in the legend | 

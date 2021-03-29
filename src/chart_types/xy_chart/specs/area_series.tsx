@@ -23,12 +23,12 @@ import { ChartType } from '../..';
 import { ScaleType } from '../../../scales/constants';
 import { SpecType } from '../../../specs/constants';
 import { specComponentFactory, getConnect } from '../../../state/spec_factory';
-import { AreaSeriesSpec, HistogramModeAlignments, DEFAULT_GLOBAL_ID, SeriesTypes } from '../utils/specs';
+import { AreaSeriesSpec, HistogramModeAlignments, DEFAULT_GLOBAL_ID, SeriesType } from '../utils/specs';
 
 const defaultProps = {
   chartType: ChartType.XYAxis,
   specType: SpecType.Series,
-  seriesType: SeriesTypes.Area,
+  seriesType: SeriesType.Area,
   groupId: DEFAULT_GLOBAL_ID,
   xScaleType: ScaleType.Linear,
   yScaleType: ScaleType.Linear,

@@ -43,7 +43,7 @@ import {
   DataSeries,
   splitSeriesDataByAccessors,
 } from './series';
-import { BasicSeriesSpec, LineSeriesSpec, SeriesTypes, AreaSeriesSpec } from './specs';
+import { BasicSeriesSpec, LineSeriesSpec, SeriesType, AreaSeriesSpec } from './specs';
 import { formatStackedDataSeriesValues } from './stacked_series_utils';
 
 const dg = new SeededDataGenerator();
@@ -445,7 +445,7 @@ describe('Series', () => {
       chartType: ChartType.XYAxis,
       id: 'spec1',
       groupId: 'group',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -458,7 +458,7 @@ describe('Series', () => {
       chartType: ChartType.XYAxis,
       id: 'spec2',
       groupId: 'group2',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -478,7 +478,7 @@ describe('Series', () => {
       chartType: ChartType.XYAxis,
       id: 'spec1',
       groupId: 'group',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -491,7 +491,7 @@ describe('Series', () => {
       chartType: ChartType.XYAxis,
       id: 'spec2',
       groupId: 'group2',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -580,7 +580,7 @@ describe('Series', () => {
       chartType: ChartType.XYAxis,
       id,
       groupId: 'group',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',

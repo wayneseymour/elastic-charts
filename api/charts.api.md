@@ -107,7 +107,7 @@ export const AreaSeries: React_2.FunctionComponent<SpecRequiredProps & SpecOptio
 
 // @public
 export type AreaSeriesSpec = BasicSeriesSpec & HistogramConfig & Postfixes & {
-    seriesType: typeof SeriesTypes.Area;
+    seriesType: typeof SeriesType.Area;
     curve?: CurveType;
     areaSeriesStyle?: RecursivePartial<AreaSeriesStyle>;
     stackMode?: StackMode;
@@ -266,7 +266,7 @@ export const BarSeries: React_2.FunctionComponent<SpecRequiredProps_2 & SpecOpti
 
 // @public
 export type BarSeriesSpec = BasicSeriesSpec & Postfixes & {
-    seriesType: typeof SeriesTypes.Bar;
+    seriesType: typeof SeriesType.Bar;
     enableHistogramMode?: boolean;
     barSeriesStyle?: RecursivePartial<BarSeriesStyle>;
     stackMode?: StackMode;
@@ -364,7 +364,7 @@ export const BubbleSeries: React_2.FunctionComponent<SpecRequiredProps_3 & SpecO
 
 // @alpha
 export type BubbleSeriesSpec = BasicSeriesSpec & {
-    seriesType: typeof SeriesTypes.Bubble;
+    seriesType: typeof SeriesType.Bubble;
     bubbleSeriesStyle?: RecursivePartial<BubbleSeriesStyle>;
     pointStyleAccessor?: PointStyleAccessor;
 };
@@ -1375,7 +1375,7 @@ export const LineSeries: React_2.FunctionComponent<SpecRequiredProps_6 & SpecOpt
 
 // @public
 export type LineSeriesSpec = BasicSeriesSpec & HistogramConfig & {
-    seriesType: typeof SeriesTypes.Line;
+    seriesType: typeof SeriesType.Line;
     curve?: CurveType;
     lineSeriesStyle?: RecursivePartial<LineSeriesStyle>;
     pointStyleAccessor?: PointStyleAccessor;
@@ -1948,7 +1948,7 @@ export interface SeriesSpec extends Spec {
     groupId: string;
     hideInLegend?: boolean;
     name?: SeriesNameAccessor;
-    seriesType: SeriesTypes;
+    seriesType: SeriesType;
     // @deprecated
     sortIndex?: number;
     // (undocumented)
@@ -1965,10 +1965,10 @@ export interface SeriesSpec extends Spec {
 // @public (undocumented)
 export type SeriesSpecs<S extends BasicSeriesSpec = BasicSeriesSpec> = Array<S>;
 
-// Warning: (ae-missing-release-tag) "SeriesTypes" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
+// Warning: (ae-missing-release-tag) "SeriesType" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public (undocumented)
-export const SeriesTypes: Readonly<{
+export const SeriesType: Readonly<{
     Area: "area";
     Bar: "bar";
     Line: "line";
@@ -1976,7 +1976,7 @@ export const SeriesTypes: Readonly<{
 }>;
 
 // @public
-export type SeriesTypes = $Values<typeof SeriesTypes>;
+export type SeriesType = $Values<typeof SeriesType>;
 
 // Warning: (ae-missing-release-tag) "Settings" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //

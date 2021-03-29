@@ -26,7 +26,7 @@ import { Position } from '../../../utils/common';
 import { BARCHART_1Y0G } from '../../../utils/data_samples/test_dataset';
 import { Logger } from '../../../utils/logger';
 import { computeSeriesDomainsSelector } from '../state/selectors/compute_series_domains';
-import { BasicSeriesSpec, SeriesTypes, DEFAULT_GLOBAL_ID, StackMode } from '../utils/specs';
+import { BasicSeriesSpec, SeriesType, DEFAULT_GLOBAL_ID, StackMode } from '../utils/specs';
 import { coerceYScaleTypes, groupSeriesByYGroup } from './y_domain';
 
 jest.mock('../../../utils/logger', () => ({
@@ -231,7 +231,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec1',
       groupId: 'group1',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -243,7 +243,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec2',
       groupId: 'group2',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -266,7 +266,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec1',
       groupId: 'group1',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -279,7 +279,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec2',
       groupId: 'group2',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -303,7 +303,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec1',
       groupId: 'group',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -316,7 +316,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec2',
       groupId: 'group',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -338,7 +338,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec1',
       groupId: 'group1',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -351,7 +351,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec2',
       groupId: 'group1',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',
@@ -364,7 +364,7 @@ describe('Y Domain', () => {
       specType: SpecType.Series,
       id: 'spec3',
       groupId: 'group2',
-      seriesType: SeriesTypes.Line,
+      seriesType: SeriesType.Line,
       yScaleType: ScaleType.Log,
       xScaleType: ScaleType.Linear,
       xAccessor: 'x',

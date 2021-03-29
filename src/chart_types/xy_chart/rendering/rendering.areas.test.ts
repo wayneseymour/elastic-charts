@@ -920,7 +920,7 @@ describe('Rendering points - areas', () => {
   //     specType: SpecType.Series,
   //     id: SPEC_ID,
   //     groupId: GROUP_ID,
-  //     seriesType: SeriesTypes.Area,
+  //     seriesType: SeriesType.Area,
   //     data: [
   //       [0, 10],
   //       [1, 5],

@@ -33,7 +33,7 @@ import { GlobalChartState } from '../../../state/chart_state';
 import { getSettingsSpecSelector } from '../../../state/selectors/get_settings_specs';
 import { Position, RecursivePartial } from '../../../utils/common';
 import { AxisStyle } from '../../../utils/themes/theme';
-import { BarSeriesSpec, BasicSeriesSpec, AxisSpec, SeriesTypes } from '../utils/specs';
+import { BarSeriesSpec, BasicSeriesSpec, AxisSpec, SeriesType } from '../utils/specs';
 import { computeSeriesGeometriesSelector } from './selectors/compute_series_geometries';
 import { getCursorBandPositionSelector } from './selectors/get_cursor_band';
 import { getProjectedPointerPositionSelector } from './selectors/get_projected_pointer_position';
@@ -55,7 +55,7 @@ const ordinalBarSeries: BarSeriesSpec = {
   specType: SpecType.Series,
   id: SPEC_ID,
   groupId: GROUP_ID,
-  seriesType: SeriesTypes.Bar,
+  seriesType: SeriesType.Bar,
   data: [
     [0, 10],
     [1, 5],
@@ -71,7 +71,7 @@ const linearBarSeries: BarSeriesSpec = {
   specType: SpecType.Series,
   id: SPEC_ID,
   groupId: GROUP_ID,
-  seriesType: SeriesTypes.Bar,
+  seriesType: SeriesType.Bar,
   data: [
     [0, 10],
     [1, 5],

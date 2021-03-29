@@ -31,7 +31,7 @@ import { AxisStyle } from '../../../utils/themes/theme';
 import { computeLegendSelector } from '../state/selectors/compute_legend';
 import { computeSeriesDomainsSelector } from '../state/selectors/compute_series_domains';
 import { getSeriesName } from '../utils/series';
-import { AxisSpec, BasicSeriesSpec, SeriesTypes } from '../utils/specs';
+import { AxisSpec, BasicSeriesSpec, SeriesType } from '../utils/specs';
 import { getLegendExtra } from './legend';
 
 const nullDisplayValue = {
@@ -46,7 +46,7 @@ const spec1: BasicSeriesSpec = {
   id: 'spec1',
   name: 'Spec 1 title',
   groupId: 'group',
-  seriesType: SeriesTypes.Line,
+  seriesType: SeriesType.Line,
   yScaleType: ScaleType.Log,
   xScaleType: ScaleType.Linear,
   xAccessor: 'x',
@@ -59,7 +59,7 @@ const spec2: BasicSeriesSpec = {
   specType: SpecType.Series,
   id: 'spec2',
   groupId: 'group',
-  seriesType: SeriesTypes.Line,
+  seriesType: SeriesType.Line,
   yScaleType: ScaleType.Log,
   xScaleType: ScaleType.Linear,
   xAccessor: 'x',

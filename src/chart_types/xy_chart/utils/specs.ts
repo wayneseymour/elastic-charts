@@ -51,7 +51,7 @@ export type BarStyleOverride = RecursivePartial<BarSeriesStyle> | Color | null;
 /** @public */
 export type PointStyleOverride = RecursivePartial<PointStyle> | Color | null;
 
-export const SeriesTypes = Object.freeze({
+export const SeriesType = Object.freeze({
   Area: 'area' as const,
   Bar: 'bar' as const,
   Line: 'line' as const,
@@ -62,7 +62,7 @@ export const SeriesTypes = Object.freeze({
  * XY series type
  * @public
  */
-export type SeriesTypes = $Values<typeof SeriesTypes>;
+export type SeriesType = $Values<typeof SeriesType>;
 
 /**
  * The offset and mode applied when stacking values
@@ -366,7 +366,7 @@ export interface SeriesSpec extends Spec {
   /** An array of data */
   data: Datum[];
   /** The type of series you are looking to render */
-  seriesType: SeriesTypes;
+  seriesType: SeriesType;
   /** Set colors for specific series */
   color?: SeriesColorAccessor;
   /**
@@ -494,8 +494,8 @@ export type SeriesSpecs<S extends BasicSeriesSpec = BasicSeriesSpec> = Array<S>;
  */
 export type BarSeriesSpec = BasicSeriesSpec &
   Postfixes & {
-    /** @defaultValue `bar` {@link (SeriesTypes:type) | SeriesTypes.Bar} */
-    seriesType: typeof SeriesTypes.Bar;
+    /** @defaultValue `bar` {@link (SeriesType:type) | SeriesType.Bar} */
+    seriesType: typeof SeriesType.Bar;
     /** If true, will stack all BarSeries and align bars to ticks (instead of centered on ticks) */
     enableHistogramMode?: boolean;
     barSeriesStyle?: RecursivePartial<BarSeriesStyle>;
@@ -554,8 +554,8 @@ export type FitConfig = {
  */
 export type LineSeriesSpec = BasicSeriesSpec &
   HistogramConfig & {
-    /** @defaultValue `line` {@link (SeriesTypes:type) | SeriesTypes.Line} */
-    seriesType: typeof SeriesTypes.Line;
+    /** @defaultValue `line` {@link (SeriesType:type) | SeriesType.Line} */
+    seriesType: typeof SeriesType.Line;
     curve?: CurveType;
     lineSeriesStyle?: RecursivePartial<LineSeriesStyle>;
     /**
@@ -574,8 +574,8 @@ export type LineSeriesSpec = BasicSeriesSpec &
  * @alpha
  */
 export type BubbleSeriesSpec = BasicSeriesSpec & {
-  /** @defaultValue `bubble` {@link (SeriesTypes:type) | SeriesTypes.Bubble} */
-  seriesType: typeof SeriesTypes.Bubble;
+  /** @defaultValue `bubble` {@link (SeriesType:type) | SeriesType.Bubble} */
+  seriesType: typeof SeriesType.Bubble;
   bubbleSeriesStyle?: RecursivePartial<BubbleSeriesStyle>;
   /**
    * An optional functional accessor to return custom color or style for point datum
@@ -590,8 +590,8 @@ export type BubbleSeriesSpec = BasicSeriesSpec & {
 export type AreaSeriesSpec = BasicSeriesSpec &
   HistogramConfig &
   Postfixes & {
-    /** @defaultValue `area` {@link (SeriesTypes:type) | SeriesTypes.Area} */
-    seriesType: typeof SeriesTypes.Area;
+    /** @defaultValue `area` {@link (SeriesType:type) | SeriesType.Area} */
+    seriesType: typeof SeriesType.Area;
     /** The type of interpolator to be used to interpolate values between points */
     curve?: CurveType;
     areaSeriesStyle?: RecursivePartial<AreaSeriesStyle>;
@@ -894,22 +894,22 @@ export function isRectAnnotation(spec: AnnotationSpec): spec is RectAnnotationSp
 
 /** @internal */
 export function isBarSeriesSpec(spec: BasicSeriesSpec): spec is BarSeriesSpec {
-  return spec.seriesType === SeriesTypes.Bar;
+  return spec.seriesType === SeriesType.Bar;
 }
 
 /** @internal */
 export function isBubbleSeriesSpec(spec: BasicSeriesSpec): spec is BubbleSeriesSpec {
-  return spec.seriesType === SeriesTypes.Bubble;
+  return spec.seriesType === SeriesType.Bubble;
 }
 
 /** @internal */
 export function isLineSeriesSpec(spec: BasicSeriesSpec): spec is LineSeriesSpec {
-  return spec.seriesType === SeriesTypes.Line;
+  return spec.seriesType === SeriesType.Line;
 }
 
 /** @internal */
 export function isAreaSeriesSpec(spec: BasicSeriesSpec): spec is AreaSeriesSpec {
-  return spec.seriesType === SeriesTypes.Area;
+  return spec.seriesType === SeriesType.Area;
 }
 
 /** @internal */

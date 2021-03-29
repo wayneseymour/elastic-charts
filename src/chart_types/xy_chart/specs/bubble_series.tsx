@@ -23,12 +23,12 @@ import { ChartType } from '../..';
 import { ScaleType } from '../../../scales/constants';
 import { SpecType } from '../../../specs/constants';
 import { specComponentFactory, getConnect } from '../../../state/spec_factory';
-import { BubbleSeriesSpec, DEFAULT_GLOBAL_ID, SeriesTypes } from '../utils/specs';
+import { BubbleSeriesSpec, DEFAULT_GLOBAL_ID, SeriesType } from '../utils/specs';
 
 const defaultProps = {
   chartType: ChartType.XYAxis,
   specType: SpecType.Series,
-  seriesType: SeriesTypes.Bubble,
+  seriesType: SeriesType.Bubble,
   groupId: DEFAULT_GLOBAL_ID,
   xScaleType: ScaleType.Ordinal,
   yScaleType: ScaleType.Linear,

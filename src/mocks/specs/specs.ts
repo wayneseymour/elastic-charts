@@ -32,7 +32,7 @@ import {
   HistogramBarSeriesSpec,
   LineSeriesSpec,
   BasicSeriesSpec,
-  SeriesTypes,
+  SeriesType,
   BubbleSeriesSpec,
   LineAnnotationSpec,
   RectAnnotationSpec,
@@ -52,7 +52,7 @@ export class MockSeriesSpec {
     chartType: ChartType.XYAxis,
     specType: SpecType.Series,
     id: 'spec1',
-    seriesType: SeriesTypes.Bar,
+    seriesType: SeriesType.Bar,
     groupId: DEFAULT_GLOBAL_ID,
     xScaleType: ScaleType.Ordinal,
     yScaleType: ScaleType.Linear,
@@ -67,7 +67,7 @@ export class MockSeriesSpec {
     chartType: ChartType.XYAxis,
     specType: SpecType.Series,
     id: 'spec1',
-    seriesType: SeriesTypes.Bar,
+    seriesType: SeriesType.Bar,
     groupId: DEFAULT_GLOBAL_ID,
     xScaleType: ScaleType.Ordinal,
     yScaleType: ScaleType.Linear,
@@ -82,7 +82,7 @@ export class MockSeriesSpec {
     chartType: ChartType.XYAxis,
     specType: SpecType.Series,
     id: 'spec1',
-    seriesType: SeriesTypes.Area,
+    seriesType: SeriesType.Area,
     groupId: DEFAULT_GLOBAL_ID,
     xScaleType: ScaleType.Ordinal,
     yScaleType: ScaleType.Linear,
@@ -97,7 +97,7 @@ export class MockSeriesSpec {
     chartType: ChartType.XYAxis,
     specType: SpecType.Series,
     id: 'spec1',
-    seriesType: SeriesTypes.Line,
+    seriesType: SeriesType.Line,
     groupId: DEFAULT_GLOBAL_ID,
     xScaleType: ScaleType.Ordinal,
     yScaleType: ScaleType.Linear,
@@ -112,7 +112,7 @@ export class MockSeriesSpec {
     chartType: ChartType.XYAxis,
     specType: SpecType.Series,
     id: 'spec1',
-    seriesType: SeriesTypes.Bubble,
+    seriesType: SeriesType.Bubble,
     groupId: DEFAULT_GLOBAL_ID,
     xScaleType: ScaleType.Ordinal,
     yScaleType: ScaleType.Linear,
@@ -218,17 +218,17 @@ export class MockSeriesSpec {
     });
   }
 
-  static byType(type?: SeriesTypes | 'histogram'): BasicSeriesSpec {
+  static byType(type?: SeriesType | 'histogram'): BasicSeriesSpec {
     switch (type) {
-      case SeriesTypes.Line:
+      case SeriesType.Line:
         return MockSeriesSpec.lineBase;
-      case SeriesTypes.Area:
+      case SeriesType.Area:
         return MockSeriesSpec.areaBase;
-      case SeriesTypes.Bubble:
+      case SeriesType.Bubble:
         return MockSeriesSpec.bubbleBase;
       case 'histogram':
         return MockSeriesSpec.histogramBarBase;
-      case SeriesTypes.Bar:
+      case SeriesType.Bar:
       default:
         return MockSeriesSpec.barBase;
     }

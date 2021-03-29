@@ -23,7 +23,7 @@ import { SpecType } from '../../../specs/constants';
 import { Dimensions } from '../../../utils/dimensions';
 import { computeSeriesDomains } from '../state/utils/utils';
 import { computeXScale } from '../utils/scales';
-import { BasicSeriesSpec, SeriesTypes } from '../utils/specs';
+import { BasicSeriesSpec, SeriesType } from '../utils/specs';
 import { getCursorBandPosition, getSnapPosition } from './crosshair_utils';
 
 describe('Crosshair utils linear scale', () => {
@@ -37,7 +37,7 @@ describe('Crosshair utils linear scale', () => {
     specType: SpecType.Series,
     id: barSeries1SpecId,
     groupId: 'group1',
-    seriesType: SeriesTypes.Bar,
+    seriesType: SeriesType.Bar,
     data: [
       [0, 0],
       [1, 0],
@@ -53,7 +53,7 @@ describe('Crosshair utils linear scale', () => {
     specType: SpecType.Series,
     id: barSeries2SpecId,
     groupId: 'group1',
-    seriesType: SeriesTypes.Bar,
+    seriesType: SeriesType.Bar,
     data: [
       [0, 2],
       [1, 2],
@@ -69,7 +69,7 @@ describe('Crosshair utils linear scale', () => {
     specType: SpecType.Series,
     id: lineSeries1SpecId,
     groupId: 'group1',
-    seriesType: SeriesTypes.Line,
+    seriesType: SeriesType.Line,
     data: [
       [0, 0],
       [1, 0],
@@ -85,7 +85,7 @@ describe('Crosshair utils linear scale', () => {
     specType: SpecType.Series,
     id: lineSeries2SpecId,
     groupId: 'group1',
-    seriesType: SeriesTypes.Line,
+    seriesType: SeriesType.Line,
     data: [
       [0, 2],
       [1, 2],

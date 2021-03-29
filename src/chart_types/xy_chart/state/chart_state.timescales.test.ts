@@ -30,7 +30,7 @@ import { upsertSpec, specParsed } from '../../../state/actions/specs';
 import { chartStoreReducer, GlobalChartState } from '../../../state/chart_state';
 import { LIGHT_THEME } from '../../../utils/themes/light_theme';
 import { mergeWithDefaultTheme } from '../../../utils/themes/merge_utils';
-import { LineSeriesSpec, SeriesTypes } from '../utils/specs';
+import { LineSeriesSpec, SeriesType } from '../utils/specs';
 import { computeSeriesGeometriesSelector } from './selectors/compute_series_geometries';
 import { getComputedScalesSelector } from './selectors/get_computed_scales';
 import { getTooltipInfoSelector } from './selectors/get_tooltip_values_highlighted_geoms';
@@ -50,7 +50,7 @@ describe('Render chart', () => {
         specType: SpecType.Series,
         id: 'lines',
         groupId: 'line',
-        seriesType: SeriesTypes.Line,
+        seriesType: SeriesType.Line,
         xScaleType: ScaleType.Time,
         yScaleType: ScaleType.Linear,
         xAccessor: 0,
@@ -125,7 +125,7 @@ describe('Render chart', () => {
         specType: SpecType.Series,
         id: 'lines',
         groupId: 'line',
-        seriesType: SeriesTypes.Line,
+        seriesType: SeriesType.Line,
         xScaleType: ScaleType.Time,
         yScaleType: ScaleType.Linear,
         xAccessor: 0,
@@ -198,7 +198,7 @@ describe('Render chart', () => {
         specType: SpecType.Series,
         id: 'lines',
         groupId: 'line',
-        seriesType: SeriesTypes.Line,
+        seriesType: SeriesType.Line,
         xScaleType: ScaleType.Time,
         yScaleType: ScaleType.Linear,
         xAccessor: 0,
